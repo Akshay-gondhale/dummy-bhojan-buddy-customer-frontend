@@ -150,7 +150,7 @@ const MobileSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
           height="985"
           clipPath="url(#restaurant-shape)"
         >
-          <div className="relative h-full w-full">
+          <div className="fixed h-full w-full">
             <Image
               src={image}
               alt="Restaurant"

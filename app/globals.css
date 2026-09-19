@@ -1,12 +1,32 @@
 @import 'tailwindcss';
 
+@custom-variant tablet (
+  @media (min-width: 48rem) and (min-aspect-ratio: 1/1)
+);
+
+@layer base {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    appearance: textfield;
+  }
+}
+
 @theme {
   --color-primary: #8fc971;
+  --color-primary-light: #edf7e8;
   --color-primary-soft: #edf7e8;
   --color-textColor: #26312b;
   --color-muted: #6f7c76;
   --color-background: #fcfbf7;
   --color-surface: #ffffff;
+
   --font-nunito: 'Nunito', sans-serif;
   --font-inter: 'Inter', sans-serif;
+
+  --breakpoint-lg: 90rem;
 }

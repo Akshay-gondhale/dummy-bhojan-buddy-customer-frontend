@@ -57,7 +57,7 @@ const DesktopSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
         />
       </svg>
       <div className="absolute top-0 right-0 flex h-[4rem] w-[22%] flex-col items-center justify-center pt-[.5rem]">
-        <p className="text-muted font-nunito text-[.8rem] font-medium">
+        <p className="text-muted font-nunito text-[.8rem] font-bold">
           Powered by
         </p>
         <BhojanBuddyHorizontalLogo className="mt-[-1rem] w-[75%]" />
@@ -116,7 +116,7 @@ const TabletSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
         />
       </svg>
       <div className="absolute top-[.1rem] right-0 flex h-[4rem] w-[27%] flex-col items-center justify-center pt-[.7rem]">
-        <p className="text-muted font-nunito text-[.8rem] font-medium">
+        <p className="text-muted font-nunito text-[.8rem] font-bold">
           Powered by
         </p>
         <BhojanBuddyHorizontalLogo className="mt-[-1rem] w-[80%]" />
@@ -175,7 +175,7 @@ const MobileSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
         />
       </svg>
       <div className="absolute top-0 right-0 flex h-[21%] w-[28%] flex-col items-center justify-center">
-        <p className="text-muted font-nunito text-[.6rem] font-medium">
+        <p className="text-muted font-nunito text-[.6rem] font-bold">
           Powered by
         </p>
         <BhojanBuddyHorizontalLogo className="mt-[-.5rem] w-[80%]" />

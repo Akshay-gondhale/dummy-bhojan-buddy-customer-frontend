@@ -128,10 +128,10 @@ const MobileSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
   return (
     <>
       <svg
-        className="h-max w-[100vw]"
+        className="block h-auto w-[100vw]"
         viewBox="0 0 1500 985"
         fill="none"
-        preserveAspectRatio="none"
+        preserveAspectRatio="xMidYMid slice"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -147,7 +147,7 @@ const MobileSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
           x="0"
           y="0"
           width="1500"
-          height="1500"
+          height="985"
           clipPath="url(#restaurant-shape)"
         >
           <div className="relative h-full w-full">
@@ -155,15 +155,15 @@ const MobileSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
               src={image}
               alt="Restaurant"
               fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority
+              sizes="100vw"
               className="object-cover object-center"
             />
           </div>
         </foreignObject>
       </svg>
       <svg
-        className="text-primary-soft absolute top-0 right-0 z-[-10] h-max w-[100%]"
+        className="text-primary-soft absolute top-0 right-0 z-[-10] h-auto w-[100%]"
         viewBox="0 0 1500 1058"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

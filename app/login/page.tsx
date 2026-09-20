@@ -24,6 +24,7 @@ const Login = () => {
               <Image
                 className="tablet:h-[7rem] tablet:w-max h-auto w-[70%] object-contain"
                 src={DummyRestaurantLogo}
+                priority
                 alt="..."
               />
               <div className="bg-primary-light border-primary mt-[1rem] flex h-[2.5rem] w-max items-center justify-center gap-[.5rem] rounded-[.8rem] border-[1px] px-[1rem]">
@@ -47,6 +48,7 @@ const Login = () => {
                     type="number"
                     className="placeholder:text-muted font-inter w-[100%] font-medium outline-none"
                     placeholder="Enter your phone number"
+                    suppressHydrationWarning={true}
                   />
                 </div>
               </div>

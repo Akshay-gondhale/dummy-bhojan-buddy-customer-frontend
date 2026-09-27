@@ -58,7 +58,7 @@ const DesktopSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
             stroke="currentColor"
           />
         </svg>
-        <div className="absolute top-0 right-0 flex h-[4rem] w-[22%] flex-col items-center justify-center pt-[.5rem]">
+        <div className="absolute top-4 right-0 flex h-[4rem] w-[22%] flex-col items-center justify-center pt-[.5rem]">
           <p className="text-muted font-nunito text-[.8rem] font-bold">
             Powered by
           </p>

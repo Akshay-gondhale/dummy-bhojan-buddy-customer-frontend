@@ -1,0 +1,34 @@
+#!/bin/sh
+
+echo ""
+echo "=============================================================="
+echo "🔍 PRE-COMMIT CHECKS"
+echo "=============================================================="
+echo ""
+echo "✨ Formatting staged files..."
+echo "🔎 Running ESLint on staged files..."
+echo ""
+
+npx lint-staged
+
+STATUS=$?
+
+echo ""
+
+if [ $STATUS -ne 0 ]; then
+  echo "=============================================================="
+  echo "❌ PRE-COMMIT CHECKS FAILED"
+  echo "=============================================================="
+  echo ""
+  echo "Your commit has been blocked."
+  echo "Please fix the issues above and try committing again."
+  echo ""
+  exit $STATUS
+fi
+
+echo "=============================================================="
+echo "✅ PRE-COMMIT CHECKS PASSED"
+echo "=============================================================="
+echo ""
+
+exit 0

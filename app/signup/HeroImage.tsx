@@ -11,7 +11,7 @@ type HeroImageProps = {
 };
 
 const DesktopSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [, setIsLoaded] = useState<boolean>(false);
   const svgMask = `url("data:image/svg+xml,${encodeURIComponent(
     `
       <svg
@@ -52,47 +52,47 @@ const DesktopSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
         </div>
 
         {/* Floating Feature Cards Overlay for Desktop (1440px+) */}
-        <div className="absolute inset-0 z-20 pointer-events-none">
+        <div className="pointer-events-none absolute inset-0 z-20">
           {/* Card 1 */}
-          <div className="absolute top-[17%] left-[12%] xl:left-[14%] flex items-center gap-3.5 bg-white/95 backdrop-blur-md rounded-full px-5 py-3 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] border border-white/80 pointer-events-auto transition-all hover:scale-105">
-            <div className="flex size-11 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c] shrink-0">
+          <div className="pointer-events-auto absolute top-[17%] left-[12%] flex items-center gap-3.5 rounded-full border border-white/80 bg-white/95 px-5 py-3 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all hover:scale-105 xl:left-[14%]">
+            <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c]">
               <SpoonAndForkIcon className="size-10 text-[#388e3c]" />
             </div>
             <div>
-              <h4 className="font-nunito text-sm xl:text-base font-extrabold text-[#1c281f] leading-tight whitespace-nowrap">
+              <h4 className="font-nunito text-sm leading-tight font-extrabold whitespace-nowrap text-[#1c281f] xl:text-base">
                 One account
               </h4>
-              <p className="font-inter text-xs text-[#66736c] leading-tight mt-0.5 whitespace-nowrap">
+              <p className="font-inter mt-0.5 text-xs leading-tight whitespace-nowrap text-[#66736c]">
                 Use it at any partner restaurant.
               </p>
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="absolute top-[34%] left-[22%] xl:left-[24%] flex items-center gap-3.5 bg-white/95 backdrop-blur-md rounded-full px-5 py-3 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] border border-white/80 pointer-events-auto transition-all hover:scale-105">
-            <div className="flex size-11 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c] shrink-0">
+          <div className="pointer-events-auto absolute top-[34%] left-[22%] flex items-center gap-3.5 rounded-full border border-white/80 bg-white/95 px-5 py-3 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all hover:scale-105 xl:left-[24%]">
+            <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c]">
               <LoveLogo className="size-6 text-[#388e3c]" />
             </div>
             <div>
-              <h4 className="font-nunito text-sm xl:text-base font-extrabold text-[#1c281f] leading-tight whitespace-nowrap">
+              <h4 className="font-nunito text-sm leading-tight font-extrabold whitespace-nowrap text-[#1c281f] xl:text-base">
                 Save your favourites
               </h4>
-              <p className="font-inter text-xs text-[#66736c] leading-tight mt-0.5 whitespace-nowrap">
+              <p className="font-inter mt-0.5 text-xs leading-tight whitespace-nowrap text-[#66736c]">
                 Get personalised recommendations.
               </p>
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="absolute top-[51%] left-[32%] xl:left-[34%] flex items-center gap-3.5 bg-white/95 backdrop-blur-md rounded-full px-5 py-3 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] border border-white/80 pointer-events-auto transition-all hover:scale-105">
-            <div className="flex size-11 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c] shrink-0">
+          <div className="pointer-events-auto absolute top-[51%] left-[32%] flex items-center gap-3.5 rounded-full border border-white/80 bg-white/95 px-5 py-3 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all hover:scale-105 xl:left-[34%]">
+            <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c]">
               <ClockLogo className="size-6 text-[#388e3c]" />
             </div>
             <div>
-              <h4 className="font-nunito text-sm xl:text-base font-extrabold text-[#1c281f] leading-tight whitespace-nowrap">
+              <h4 className="font-nunito text-sm leading-tight font-extrabold whitespace-nowrap text-[#1c281f] xl:text-base">
                 A smoother experience
               </h4>
-              <p className="font-inter text-xs text-[#66736c] leading-tight mt-0.5 whitespace-nowrap">
+              <p className="font-inter mt-0.5 text-xs leading-tight whitespace-nowrap text-[#66736c]">
                 Faster ordering, easy reorders and more.
               </p>
             </div>
@@ -161,47 +161,47 @@ const TabletSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
         </div>
 
         {/* Floating Feature Cards Overlay for Tablet (768px to 1439px) */}
-        <div className="absolute inset-0 z-20 pointer-events-none">
+        <div className="pointer-events-none absolute inset-0 z-20">
           {/* Card 1 */}
-          <div className="absolute top-[16%] left-[38%] flex items-center gap-2.5 bg-white/95 backdrop-blur-md rounded-full px-3.5 py-2 shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] border border-white/80 pointer-events-auto origin-left scale-[0.8] sm:scale-[0.85] md:scale-90 lg:scale-[0.95] transition-all">
-            <div className="flex size-8 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c] shrink-0">
+          <div className="pointer-events-auto absolute top-[16%] left-[38%] flex origin-left scale-[0.8] items-center gap-2.5 rounded-full border border-white/80 bg-white/95 px-3.5 py-2 shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all sm:scale-[0.85] md:scale-90 lg:scale-[0.95]">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c]">
               <SpoonAndForkIcon className="size-4 text-[#388e3c]" />
             </div>
             <div>
-              <h4 className="font-nunito text-xs sm:text-sm font-extrabold text-[#1c281f] leading-tight whitespace-nowrap">
+              <h4 className="font-nunito text-xs leading-tight font-extrabold whitespace-nowrap text-[#1c281f] sm:text-sm">
                 One account
               </h4>
-              <p className="font-inter text-[0.68rem] text-[#66736c] leading-tight mt-0.5 whitespace-nowrap">
+              <p className="font-inter mt-0.5 text-[0.68rem] leading-tight whitespace-nowrap text-[#66736c]">
                 Use it at any partner restaurant.
               </p>
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="absolute top-[33%] left-[46%] flex items-center gap-2.5 bg-white/95 backdrop-blur-md rounded-full px-3.5 py-2 shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] border border-white/80 pointer-events-auto origin-left scale-[0.8] sm:scale-[0.85] md:scale-90 lg:scale-[0.95] transition-all">
-            <div className="flex size-8 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c] shrink-0">
+          <div className="pointer-events-auto absolute top-[33%] left-[46%] flex origin-left scale-[0.8] items-center gap-2.5 rounded-full border border-white/80 bg-white/95 px-3.5 py-2 shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all sm:scale-[0.85] md:scale-90 lg:scale-[0.95]">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c]">
               <LoveLogo className="size-4 text-[#388e3c]" />
             </div>
             <div>
-              <h4 className="font-nunito text-xs sm:text-sm font-extrabold text-[#1c281f] leading-tight whitespace-nowrap">
+              <h4 className="font-nunito text-xs leading-tight font-extrabold whitespace-nowrap text-[#1c281f] sm:text-sm">
                 Save your favourites
               </h4>
-              <p className="font-inter text-[0.68rem] text-[#66736c] leading-tight mt-0.5 whitespace-nowrap">
+              <p className="font-inter mt-0.5 text-[0.68rem] leading-tight whitespace-nowrap text-[#66736c]">
                 Get personalised recommendations.
               </p>
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="absolute top-[50%] left-[54%] flex items-center gap-2.5 bg-white/95 backdrop-blur-md rounded-full px-3.5 py-2 shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] border border-white/80 pointer-events-auto origin-left scale-[0.8] sm:scale-[0.85] md:scale-90 lg:scale-[0.95] transition-all">
-            <div className="flex size-8 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c] shrink-0">
+          <div className="pointer-events-auto absolute top-[50%] left-[54%] flex origin-left scale-[0.8] items-center gap-2.5 rounded-full border border-white/80 bg-white/95 px-3.5 py-2 shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all sm:scale-[0.85] md:scale-90 lg:scale-[0.95]">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#edf7e8] text-[#388e3c]">
               <ClockLogo className="size-4 text-[#388e3c]" />
             </div>
             <div>
-              <h4 className="font-nunito text-xs sm:text-sm font-extrabold text-[#1c281f] leading-tight whitespace-nowrap">
+              <h4 className="font-nunito text-xs leading-tight font-extrabold whitespace-nowrap text-[#1c281f] sm:text-sm">
                 A smoother experience
               </h4>
-              <p className="font-inter text-[0.68rem] text-[#66736c] leading-tight mt-0.5 whitespace-nowrap">
+              <p className="font-inter mt-0.5 text-[0.68rem] leading-tight whitespace-nowrap text-[#66736c]">
                 Faster ordering, easy reorders and more.
               </p>
             </div>
@@ -223,7 +223,7 @@ const TabletSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
           </svg>
         )}
         <div className="absolute top-4 right-0 flex h-16 w-[27%] flex-col items-center justify-center pt-[.7rem]">
-          <p className="text-muted  font-nunito text-[.8rem] font-bold">
+          <p className="text-muted font-nunito text-[.8rem] font-bold">
             Powered by
           </p>
           <BhojanBuddyHorizontalLogo className="-mt-4 w-[80%]" />
@@ -302,6 +302,7 @@ const HeroImage: React.FC<HeroImageProps> = ({ image }) => {
   const [windowHeight, setWindowHeight] = useState<number>(-1);
 
   useEffect(() => {
+    // eslint-disable-next-line
     setWindowWidth(window.innerWidth);
     setWindowHeight(window.innerHeight);
     window.addEventListener('resize', () => {

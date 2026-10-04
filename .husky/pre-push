@@ -1,0 +1,21 @@
+#!/bin/sh
+
+branch=$(git branch --show-current)
+
+if [ "$branch" = "main" ]; then
+  echo ""
+  echo "=============================================================="
+  echo "⚠️  CAUTION! DIRECT PUSH TO MAIN IS NOT ALLOWED"
+  echo "=============================================================="
+  echo ""
+  echo "🚫 Your push has been blocked."
+  echo ""
+  echo "Please create a feature branch and open a PR instead."
+  echo ""
+  echo "Example:"
+  echo "  git checkout -b feature/your-feature"
+  echo ""
+  echo "=============================================================="
+  echo ""
+  exit 1
+fi

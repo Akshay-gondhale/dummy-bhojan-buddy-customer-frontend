@@ -7,6 +7,9 @@ import RightArrowIcon from '@/assets/rightArrowIcon.svg';
 import extra from '@/assets/extraSpicy.png';
 import medium from '@/assets/mediumSpicy.png';
 import spicy from '@/assets/spicy.png';
+import CheckCircleIcon from '@/assets/checkCircle.svg';
+import RightChevronIcon from '@/assets/RightChevron.svg';
+import leftArrowIcon from '@/assets/leftArrowIcon.svg';
 const Survey = () => {
   return (
     <>
@@ -54,7 +57,17 @@ const Survey = () => {
 
         <div className="flex w-[100%] flex-col items-center justify-center">
           <div className="bg-primary-light mt-[.8rem] mb-[.3rem] flex size-[6rem] items-center justify-center rounded-full">
-            <BhojanBuddyLogo className="size-[4rem]" />
+            <div className="font-nunito text-muted flex size-[4rem] gap-[32rem]">
+              <Image
+                className="w-[100%] object-contain"
+                src={spicy}
+                alt="Spicy Icon"
+              />
+              <p className="flex items-center gap-2 text-[1rem] text-[#7D8795]">
+                Skip
+                <RightChevronIcon className="size-4 fill-[#7D8795]" />
+              </p>
+            </div>
           </div>
 
           <p className="font-nunito text-[2rem] leading-[2.5rem] font-bold">
@@ -67,8 +80,10 @@ const Survey = () => {
 
         {/* Spice Sectoion 2 */}
         <div className="mt-[1rem] flex items-center justify-center gap-[.8rem]">
-          <div className="shadow-6 relative flex h-[10rem] w-[15rem] items-center justify-center rounded-[.8rem]">
-            <div className="border-muted absolute top-[.5rem] right-[.5rem] size-[1.2rem] rounded-full border-[1px]"></div>
+          <div className="shadow-6 relative flex h-[10rem] w-[15rem] items-center justify-center rounded-[.8rem] border border-[#8AC184] bg-[#f1f6ee]">
+            <div className="absolute top-[.5rem] right-[.5rem] size-[1.2rem] rounded-full border-[1px] border-[#8fc971] fill-green-600">
+              <CheckCircleIcon className="w-[100% ] h-[100%] fill-green-600 object-contain" />
+            </div>
             <div className="item-center flex h-[70%] w-[50%] flex-col justify-center">
               <Image
                 className="w-[50%] object-contain"
@@ -91,7 +106,7 @@ const Survey = () => {
               />
               <h1 className="font-nunito text-[1rem] font-bold">Medium</h1>
               <h6 className="font-nunito text-muted text-[.8rem]">
-                just a hint of spice
+                A balanced kick
               </h6>
             </div>
           </div>
@@ -105,7 +120,7 @@ const Survey = () => {
               />
               <h1 className="font-nunito text-[1rem] font-bold">Spicy</h1>
               <h6 className="font-nunito text-muted text-[.8rem]">
-                just a hint of spice
+                Bring on the heat
               </h6>
             </div>
           </div>
@@ -119,13 +134,13 @@ const Survey = () => {
               />
               <h1 className="font-nunito text-[1rem] font-bold">Very Spicy</h1>
               <h6 className="font-nunito text-muted text-[.8rem]">
-                just a hint of spice
+                I love it hot
               </h6>
             </div>
           </div>
         </div>
         <div className="flex h-[7rem] items-center justify-center gap-[2rem]">
-          <button className="shadow-6 relative mt-[.5rem] flex h-[3rem] w-[15rem] items-center justify-center rounded-[.8rem] font-semibold">
+          <button className="shadow-6 relative mt-[.5rem] flex h-[3rem] w-[15rem] items-center justify-center rounded-[.8rem] border border-[#8fc971] font-semibold">
             <p className="font-nunito text-[1.2rem] font-semibold text-black">
               Back
             </p>
@@ -137,11 +152,11 @@ const Survey = () => {
           </button>
           <button className="shadow-6 bg-primary relative mt-[.5rem] flex h-[3rem] w-[15rem] items-center justify-center rounded-[.8rem] font-semibold">
             <p className="font-nunito text-[1.2rem] font-semibold text-white">
-              Back
+              Next
             </p>
             <RightArrowIcon
               className={
-                'absolute top-[50%] left-[1rem] size-[2rem] translate-y-[-50%] text-black'
+                'absolute top-[50%] right-[1rem] size-[2rem] translate-y-[-50%] text-black'
               }
             />
           </button>

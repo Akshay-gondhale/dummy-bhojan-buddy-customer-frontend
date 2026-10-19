@@ -125,32 +125,50 @@ const Survey = () => {
               </div>
             </div>
           </div>
-          <div className="shadow-6 relative flex h-[10rem] w-[15rem] items-center justify-center rounded-[.8rem] bg-white">
-            <div className="border-muted absolute top-[.5rem] right-[.5rem] size-[1.2rem] rounded-full border-[1px]"></div>
-            <div className="flex h-[100%] w-[100%] flex-col items-center justify-center">
-              <Image
-                className="w-[3.5rem] object-contain"
-                src={spicy}
-                alt="Spicy Spice"
-              />
-              <h1 className="font-nunito text-[1rem] font-bold">Spicy</h1>
-              <h6 className="font-nunito text-muted text-[.8rem]">
-                Bring on the heat
-              </h6>
+          <div className="shadow-6 tablet:h-[10rem] tablet:w-[15rem] relative flex items-center justify-center rounded-[.8rem] bg-white py-[.7rem]">
+            <div className="tablet:flex-col flex h-[100%] w-[100%] items-center justify-center gap-[1rem]">
+              <div className="tablet:pl-[0] tablet:w-auto w-[20%] pl-[.5rem]">
+                <Image
+                  className="tablet:w-[3.5rem] w-[80%] object-contain"
+                  src={spicy}
+                  alt="Spicy Spice"
+                />
+              </div>
+              <div className="tablet:w-auto flex w-[80%]">
+                <div className="tablet:w-auto w-[80%]">
+                  <h1 className="tablet:text-center font-nunito text-[1rem] font-bold">
+                    Spicy
+                  </h1>
+                  <h6 className="tablet:text-center font-nunito text-muted text-[.8rem]">
+                    Bring on the heat
+                  </h6>
+                </div>
+                <div className="tablet:w-[0] flex w-[20%] items-center justify-center">
+                  <div className="border-muted tablet:absolute top-[.5rem] right-[.5rem] size-[1.2rem] rounded-full border-[1px]"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="shadow-6 relative flex h-[10rem] w-[15rem] items-center justify-center rounded-[.8rem] bg-white">
-            <div className="border-muted absolute top-[.5rem] right-[.5rem] size-[1.2rem] rounded-full border-[1px]"></div>
-            <div className="flex h-[100%] w-[100%] flex-col items-center justify-center">
-              <Image
-                className="w-[3.5rem] object-contain"
-                src={extra}
-                alt="Extra Spicy Spice"
-              />
-              <h1 className="font-nunito text-[1rem] font-bold">Very Spicy</h1>
-              <h6 className="font-nunito text-muted text-[.8rem]">
-                I love it hot
-              </h6>
+          <div className="shadow-6 tablet:h-[10rem] tablet:w-[15rem] relative flex items-center justify-center rounded-[.8rem] bg-white py-[.7rem]">
+            <div className="tablet:flex-col flex h-[100%] w-[100%] items-center justify-center gap-[1rem]">
+              <div className="tablet:pl-[0] tablet:w-auto w-[20%] pl-[.5rem]">
+                <Image
+                  className="tablet:w-[3.5rem] object-contain"
+                  src={extra}
+                  alt="Extra Spicy Spice"
+                />
+              </div>
+              <div className="tablet:w-auto flex w-[80%]">
+                <h1 className="font-nunito text-[1rem] font-bold">
+                  Very Spicy
+                </h1>
+                <h6 className="font-nunito text-muted text-[.8rem]">
+                  I love it hot
+                </h6>
+                <div className="flex w-[20%] items-center justify-center">
+                  <div className="border-muted tablet:absolute top-[.5rem] right-[.5rem] size-[1.2rem] rounded-full border-[1px]"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -161,12 +179,12 @@ const Survey = () => {
                 'tablet:absolute tablet:left-[1rem] tablet:translate-y-[-50%] top-[50%] size-[2rem] rotate-[180deg] text-black'
               }
             />
-            <p className="font-nunito text-[1.2rem] font-semibold text-black">
+            <p className="font-nunito text-[1rem] font-semibold text-black">
               Back
             </p>
           </button>
           <button className="shadow-6 bg-primary tablet:w-[15rem] relative mt-[.5rem] flex h-[3rem] w-[50%] items-center justify-center gap-[1rem] rounded-[.8rem] font-semibold">
-            <p className="font-nunito text-[1.2rem] font-semibold text-white">
+            <p className="font-nunito text-[1rem] font-semibold text-white">
               Next
             </p>
             <RightArrowIcon

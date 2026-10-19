@@ -158,14 +158,16 @@ const Survey = () => {
                   alt="Extra Spicy Spice"
                 />
               </div>
-              <div className="tablet:w-auto w-[80%]">
-                <h1 className="tablet:text-centerfont-nunito text-[1rem] font-bold">
-                  Very Spicy
-                </h1>
-                <h6 className="tablet:text-center font-nunito text-muted text-[.8rem]">
-                  I love it hot
-                </h6>
-                <div className="flex w-[20%] items-center justify-center">
+              <div className="tablet:w-auto flex w-[80%]">
+                <div className="tablet:w-auto w-[80%]">
+                  <h1 className="tablet:text-center font-nunito text-[1rem] font-bold">
+                    Very Spicy
+                  </h1>
+                  <h6 className="tablet:text-center font-nunito text-muted text-[.8rem]">
+                    I love it hot
+                  </h6>
+                </div>
+                <div className="tablet:w-[0] flex w-[20%] items-center justify-center">
                   <div className="border-muted tablet:absolute top-[.5rem] right-[.5rem] size-[1.2rem] rounded-full border-[1px]"></div>
                 </div>
               </div>

@@ -126,7 +126,7 @@ const Survey = () => {
             </div>
           </div>
           <div className="shadow-6 tablet:h-[10rem] tablet:w-[15rem] relative flex items-center justify-center rounded-[.8rem] bg-white py-[.7rem]">
-            <div className="tablet:flex-col flex h-[100%] w-[100%] items-center justify-center gap-[1rem]">
+            <div className="tablet:gap-[0] tablet:flex-col flex h-[100%] w-[100%] items-center justify-center gap-[1rem]">
               <div className="tablet:pl-[0] tablet:w-auto w-[20%] pl-[.5rem]">
                 <Image
                   className="tablet:w-[3.5rem] w-[80%] object-contain"
@@ -150,7 +150,7 @@ const Survey = () => {
             </div>
           </div>
           <div className="shadow-6 tablet:h-[10rem] tablet:w-[15rem] relative flex items-center justify-center rounded-[.8rem] bg-white py-[.7rem]">
-            <div className="tablet:flex-col flex h-[100%] w-[100%] items-center justify-center gap-[1rem]">
+            <div className="tablet:gap-[0] tablet:flex-col flex h-[100%] w-[100%] items-center justify-center gap-[1rem]">
               <div className="tablet:pl-[0] tablet:w-auto w-[20%] pl-[.5rem]">
                 <Image
                   className="tablet:w-[3.5rem] object-contain"
@@ -158,11 +158,11 @@ const Survey = () => {
                   alt="Extra Spicy Spice"
                 />
               </div>
-              <div className="tablet:w-auto flex w-[80%]">
-                <h1 className="font-nunito text-[1rem] font-bold">
+              <div className="tablet:w-auto w-[80%]">
+                <h1 className="tablet:text-centerfont-nunito text-[1rem] font-bold">
                   Very Spicy
                 </h1>
-                <h6 className="font-nunito text-muted text-[.8rem]">
+                <h6 className="tablet:text-center font-nunito text-muted text-[.8rem]">
                   I love it hot
                 </h6>
                 <div className="flex w-[20%] items-center justify-center">

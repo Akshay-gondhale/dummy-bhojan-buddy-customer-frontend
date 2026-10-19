@@ -6,6 +6,7 @@ import Image from 'next/image';
 import RightArrowIcon from '@/assets/rightArrowIcon.svg';
 import UserIcon from '@/assets/userIcon.svg';
 import HelpMeChooseIcon from '@/assets/helpMeChooseIcon.svg';
+import Link from 'next/link';
 const Login = () => {
   return (
     <>
@@ -53,17 +54,23 @@ const Login = () => {
                 </div>
               </div>
               <button className="bg-primary relative mt-[.5rem] flex h-[3rem] w-[100%] items-center justify-center rounded-[.8rem] font-semibold">
-                <p className="font-nunito text-[1.2rem] font-semibold text-black">
+                <p className="font-nunito text-on-primary text-[1.2rem] font-semibold">
                   Login with Mobile
                 </p>
                 <RightArrowIcon
                   className={
-                    'absolute top-[50%] right-[1rem] size-[2rem] translate-y-[-50%] text-black'
+                    'text-on-primary absolute top-[50%] right-[1rem] size-[2rem] translate-y-[-50%]'
                   }
                 />
               </button>
-              <p className="text-muted mt-[.2rem] text-center text-[.8rem] font-medium">
-                We'll send you a secure OTP to continue
+              <p className="text-muted mt-[.5rem] text-center text-[.8rem] font-medium">
+                Don&apos;t have an account?
+                <Link
+                  href={'/signup'}
+                  className="text-primary font-nunito ml-[.5rem] text-[.9rem] font-bold underline"
+                >
+                  Create account
+                </Link>
               </p>
               <div className="mt-[.5rem] flex w-[100%] items-center justify-center">
                 <div className="bg-muted h-[2px] w-[45%] opacity-[.5]"></div>

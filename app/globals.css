@@ -17,11 +17,12 @@
 }
 
 @theme {
-  --color-primary: #8fc971;
+  --color-primary-dark: #056431;
+  --color-primary: #4c9a3f;
   --color-primary-light: #edf7e8;
-  --color-primary-soft: #edf7e8;
   --color-textColor: #26312b;
-  --color-muted: #6f7c76;
+  --color-on-primary: #0a0a0a;
+  --color-muted: #5f6b65;
   --color-background: #fcfbf7;
   --color-surface: #ffffff;
 

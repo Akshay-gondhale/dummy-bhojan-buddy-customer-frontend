@@ -46,19 +46,21 @@ const DesktopSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
             onLoad={() => setIsLoaded(true)}
           />
         </div>
-        <svg
-          className="text-primary-soft absolute top-0 right-0 z-[-10] h-[100%]"
-          viewBox="0 0 1884 1500"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M40.458 52.6036L65.9515 0H762.244L792.517 838.47L1883.5 867.163V1500H856.251L844.301 1487.25C828.501 1468.61 819.138 1460.09 801.281 1448.99C783.681 1431.76 767.017 1422.19 734.36 1405.15L672.22 1334.22L591.756 1306.32L492.172 1252.92L473.051 1238.58L444.371 1209.88L428.438 1190.75L407.724 1162.06L381.434 1119.82L351.957 1059.25C344.844 1041.18 339.649 1025.89 329.65 995.483C320.433 969.207 316.559 950.186 312.92 905.42C310.19 870.965 309.172 850.737 310.53 808.98C310.829 779.642 311.193 758.716 312.123 714.931C313.994 700.865 312.144 691.577 307.343 674.283V652.763L305.75 620.882L309.733 604.942L316.107 589.001L261.933 510.893L201.386 460.68L140.042 402.497C122.611 382.859 112.743 370.984 94.6318 345.112C74.2056 317.225 64.1569 300.062 49.2214 266.206C37.8666 233.168 32.3604 214.153 26.9145 177.736C24.8128 154.492 23.9473 141.026 26.9145 110.786C28.7632 88.8723 31.7911 76.1219 40.458 52.6036Z"
-            fill="currentColor"
-            stroke="currentColor"
-          />
-        </svg>
-        <div className="absolute top-4 right-0 flex h-[4rem] w-[22%] flex-col items-center justify-center pt-[.5rem]">
+        {isLoaded && (
+          <svg
+            className="text-primary-light absolute top-0 right-0 z-[-10] h-[100%]"
+            viewBox="0 0 1884 1500"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M40.458 52.6036L65.9515 0H762.244L792.517 838.47L1883.5 867.163V1500H856.251L844.301 1487.25C828.501 1468.61 819.138 1460.09 801.281 1448.99C783.681 1431.76 767.017 1422.19 734.36 1405.15L672.22 1334.22L591.756 1306.32L492.172 1252.92L473.051 1238.58L444.371 1209.88L428.438 1190.75L407.724 1162.06L381.434 1119.82L351.957 1059.25C344.844 1041.18 339.649 1025.89 329.65 995.483C320.433 969.207 316.559 950.186 312.92 905.42C310.19 870.965 309.172 850.737 310.53 808.98C310.829 779.642 311.193 758.716 312.123 714.931C313.994 700.865 312.144 691.577 307.343 674.283V652.763L305.75 620.882L309.733 604.942L316.107 589.001L261.933 510.893L201.386 460.68L140.042 402.497C122.611 382.859 112.743 370.984 94.6318 345.112C74.2056 317.225 64.1569 300.062 49.2214 266.206C37.8666 233.168 32.3604 214.153 26.9145 177.736C24.8128 154.492 23.9473 141.026 26.9145 110.786C28.7632 88.8723 31.7911 76.1219 40.458 52.6036Z"
+              fill="currentColor"
+              stroke="currentColor"
+            />
+          </svg>
+        )}
+        <div className="absolute top-0 right-0 flex h-[10vh] w-[22%] flex-col items-center justify-center pt-[.5rem]">
           <p className="text-muted font-nunito text-[.8rem] font-bold">
             Powered by
           </p>
@@ -110,7 +112,7 @@ const TabletSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
         </div>
         {isLoaded && (
           <svg
-            className="text-primary-soft absolute top-0 right-0 z-[-10] h-[100%]"
+            className="text-primary-light absolute top-0 right-0 z-[-10] h-[100%]"
             viewBox="0 0 1500 1500"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +124,7 @@ const TabletSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
             />
           </svg>
         )}
-        <div className="absolute top-[.1rem] right-0 flex h-[4rem] w-[27%] flex-col items-center justify-center pt-[.7rem]">
+        <div className="absolute top-[.1rem] right-0 flex h-[10vh] w-[27%] flex-col items-center justify-center pt-[.7rem]">
           <p className="text-muted font-nunito text-[.8rem] font-bold">
             Powered by
           </p>
@@ -175,7 +177,7 @@ const MobileSvgWrapper: React.FC<HeroImageProps> = ({ image }) => {
         </div>
         {isLoaded && (
           <svg
-            className="text-primary-soft absolute top-0 right-0 z-[-10] h-auto w-[100%]"
+            className="text-primary-light absolute top-0 right-0 z-[-10] h-auto w-[100%]"
             viewBox="0 0 1500 1058"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -202,6 +204,7 @@ const HeroImage: React.FC<HeroImageProps> = ({ image }) => {
   const [windowHeight, setWindowHeight] = useState<number>(-1);
 
   useEffect(() => {
+    // eslint-disable-next-line
     setWindowWidth(window.innerWidth);
     setWindowHeight(window.innerHeight);
     window.addEventListener('resize', () => {
